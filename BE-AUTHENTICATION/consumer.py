@@ -2,7 +2,7 @@ import json, os, django
 from confluent_kafka import Consumer
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LUMINOUS_AUTHENTICATION_CORE.settings")
 django.setup()
 from rest_framework.exceptions import ValidationError
 

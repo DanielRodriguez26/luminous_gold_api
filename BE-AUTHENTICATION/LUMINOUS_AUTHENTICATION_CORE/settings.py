@@ -90,7 +90,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'core.urls'
+ROOT_URLCONF = 'LUMINOUS_AUTHENTICATION_CORE.urls'
 
 TEMPLATES = [
     {
@@ -108,8 +108,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'
-ASGI_APPLICATION = 'core.asgi.application'
+WSGI_APPLICATION = 'LUMINOUS_AUTHENTICATION_CORE.wsgi.application'
+ASGI_APPLICATION = 'LUMINOUS_AUTHENTICATION_CORE.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -197,8 +197,8 @@ REST_FRAMEWORK = {
 
 #Authentication backends
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.google.GoogleOAuth2',
-    'social_core.backends.facebook.FacebookOAuth2',
+    'social_LUMINOUS_AUTHENTICATION_CORE.backends.google.GoogleOAuth2',
+    'social_LUMINOUS_AUTHENTICATION_CORE.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -250,7 +250,7 @@ DJOSER = {
 
 FILE_UPLOAD_PERMISSIONS = 0o640
 
-EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND='django.LUMINOUS_AUTHENTICATION_CORE.mail.backends.console.EmailBackend'
 
 # POLYGON_RPC=env('POLYGON_RPC')
 # ETHEREUM_RPC=env('ETHEREUM_RPC')
@@ -261,7 +261,7 @@ if not DEBUG:
     CORS_ORIGIN_WHITELIST =env.list('CORS_ORIGIN_WHITELIST_DEPLOY')
     CSRF_TRUSTED_ORIGINS =env.list('CSRF_TRUSTED_ORIGINS_DEPLOY')
 
-    EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_BACKEND='django.LUMINOUS_AUTHENTICATION_CORE.mail.backends.smtp.EmailBackend'
     SECURE_SSL_REDIRECT = True
 
     # SMTP.com configuration
